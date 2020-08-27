@@ -49,7 +49,10 @@ class TeacherController extends Controller
      */
     public function show($id)
     {
-        //
+        $teacher = Teacher::find($id);
+
+        return View::make('teachers.show')
+            ->with('teacher', $teacher);
     }
 
     /**
