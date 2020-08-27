@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Teacher;
 use Illuminate\Http\Request;
+use View;
 
 class TeacherController extends Controller
 {
@@ -13,7 +15,9 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        return view('teachers.view', ['teacher' => "Good morning"]);
+        $teachers = Teacher::all();
+        return View::make('teachers.index')
+            ->with('teachers', $teachers);
     }
 
     /**
