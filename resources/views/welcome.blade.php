@@ -1,14 +1,13 @@
-<html>
-    <head>
-        <title>App Name - @yield('title')</title>
-    </head>
-    <body>
-        @section('sidebar')
-            This is the master sidebar.
-        @show
+@extends('base.layout')
 
-        <div class="container">
-            @yield('content')
-        </div>
-    </body>
-</html>
+@section('title', 'Page Title')
+
+@section('sidebar')
+    @parent
+
+    <p>This is appended to the master sidebar.</p>
+@endsection
+
+@section('content')
+    <p>This is my body content.</p>
+@endsection
