@@ -5,9 +5,11 @@
 @section('sidebar')
     @parent
 
-    <p>This is appended to the master sidebar.</p>
+{{--    <p>This is appended to the master sidebar.</p>--}}
 @endsection
 
 @section('content')
-    <p>This is my body content.</p>
+    <a href="{{ URL::to('teachers') }}">Teachers</a>
+    <br/>
+    <a href="{{ URL::to('patterns') }}">Patterns</a>
 @endsection

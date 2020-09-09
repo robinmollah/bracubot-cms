@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::resource('teachers', 'TeacherController');
+Route::resource('patterns', 'PatternController');
