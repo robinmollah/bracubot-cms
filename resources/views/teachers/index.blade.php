@@ -22,6 +22,7 @@
                 <td>{{$teacher->name}}</td>
                 <td>{{$teacher->department}}</td>
                 <td>
+                    <a href="{{ URL::to('teachers/' . $teacher->initial . '/edit') }}">Edit</a>
                     <a href="{{ URL::to('teachers/' . $teacher->initial) }}">Details</a>
                 </td>
             </tr>

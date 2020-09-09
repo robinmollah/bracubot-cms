@@ -27,6 +27,7 @@
                 <td>{{$pattern->template}}</td>
                 <td>{{$pattern->query}}</td>
                 <td>
+                    <a href="{{ URL::to('patterns/' . $pattern->id . '/edit') }}">Edit</a>
                     <a href="{{ URL::to('patterns/' . $pattern->id) }}">Details</a>
                 </td>
             </tr>
