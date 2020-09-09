@@ -9,4 +9,5 @@ class Teacher extends Model
     protected $table = 'teachers';
     protected $primaryKey = 'initial';
     protected $keyType = 'string';
+    public $timestamps = false;
 }

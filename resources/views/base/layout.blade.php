@@ -4,7 +4,7 @@
     </head>
     <body>
         @section('sidebar')
-            This is the master sidebar.
+            BracU Bot - Messenger friend to provide you info
         @show
 
         <div class="container">

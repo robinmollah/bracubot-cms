@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Teacher;
 use Illuminate\Http\Request;
-use View;
-use Session;
-use Redirect;
 
-class TeacherController extends Controller
+class NoteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +13,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $teachers = Teacher::all();
-        return View::make('teachers.index')
-            ->with('teachers', $teachers);
+        //
     }
 
     /**
@@ -29,7 +23,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        return View::make('teachers.create');
+        //
     }
 
     /**
@@ -40,15 +34,7 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        $teacher = new Teacher;
-        $teacher->name = $request->get('name');
-        $teacher->mail_id = $request->get('mail_id');
-        $teacher->initial = $request->get('initial');
-        $teacher->room_number = $request->get('room_number');
-        $teacher->save();
-
-        Session::flash('message', "Successfully updated teacher");
-        return Redirect::to('teachers');
+        //
     }
 
     /**
@@ -59,10 +45,7 @@ class TeacherController extends Controller
      */
     public function show($id)
     {
-        $teacher = Teacher::find($id);
-
-        return View::make('teachers.show')
-            ->with('teacher', $teacher);
+        //
     }
 
     /**
@@ -73,10 +56,7 @@ class TeacherController extends Controller
      */
     public function edit($id)
     {
-        $teacher = Teacher::find($id);
-
-        return View::make('teachers.edit')
-            ->with('teacher', $teacher);
+        //
     }
 
     /**
@@ -88,15 +68,7 @@ class TeacherController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $teacher = Teacher::find($id);
-        $teacher->name = $request->get('name');
-        $teacher->mail_id = $request->get('mail_id');
-        $teacher->initial = $request->get('initial');
-        $teacher->room_number = $request->get('room_number');
-        $teacher->save();
-
-        Session::flash('message', "Successfully updated teacher");
-        return Redirect::to('teachers');
+        //
     }
 
     /**
