@@ -5,6 +5,7 @@
 @section('content')
     <p>All teachers list</p>
     <br/>
+        <a href="{{ URL::to('teachers/create') }}">Create</a>
     <br/>
     <table>
         <thead>

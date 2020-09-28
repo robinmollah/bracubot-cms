@@ -4,7 +4,7 @@
 
 @section('content')
 
-    {{ Form::model($teacher, array('route' => array('patterns.update', $teacher->initial), 'method' => 'PUT')) }}
+    {{ Form::model($pattern, array('route' => array('patterns.update', $pattern->id), 'method' => 'PUT')) }}
 
     <div class="form-group">
         {{ Form::label('pattern', 'Pattern') }}

@@ -5,6 +5,7 @@
 @section('content')
     <p>All pattern list</p>
     <br/>
+    <a href="{{ URL::to('patterns/create') }}">Create</a>
     <br/>
     <table>
         <thead>
